@@ -1,6 +1,0 @@
-{
-  "name": "Cine Stream",
-  "description": "A high-performance Media Discovery SPA consuming TMDB API with debounced search, infinite scroll, favorites persistence, and AI mood matching.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
