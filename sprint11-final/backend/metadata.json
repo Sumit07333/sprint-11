@@ -1,0 +1,6 @@
+{
+  "name": "The Data Hub",
+  "description": "A RESTful API server for Blog Posts with MongoDB Atlas persistence, Mongoose ODM, custom logger middleware, and mock authentication for Sprint 10 Track B.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
