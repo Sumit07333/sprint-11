@@ -1,0 +1,19 @@
+{
+  "name": "the-data-hub",
+  "version": "1.0.0",
+  "description": "The Data Hub - RESTful API Server (Sprint 10 Track B)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "build": "node -c server.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^4.21.2",
+    "mongoose": "^9.9.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
