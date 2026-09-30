@@ -41,7 +41,7 @@ Do not suggest pornography, sexually explicit movies, movies primarily focused o
 Return ONLY the movie title as plain text. Do not include markdown, bullet points, years in parentheses, quotes, or explanations.`;
 
     const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
+      model: 'gemini-3.8-flash',
       contents: prompt,
     });
 
