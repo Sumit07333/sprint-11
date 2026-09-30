@@ -100,19 +100,35 @@ const handleLogin = (req, res) => {
 app.post('/login', handleLogin);
 app.post('/api/login', handleLogin);
 
-// 7. 404 Route Not Found Handler
+// 7. TEMPORARY RENDER DEBUG ROUTES
+// These routes are only for diagnosing the deployed Render service.
+app.get('/test', (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: 'Render Express server is receiving requests'
+  });
+});
+
+app.get('/api/test', (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: 'API path is reaching Express'
+  });
+});
+
+// 8. 404 Route Not Found Handler
 app.use((req, res) => {
   res.status(404).json({ error: 'Route not found' });
 });
 
-// 8. Global Error Handler Middleware
+// 9. Global Error Handler Middleware
 // Catches unhandled errors and prevents leaking stack traces to clients
 app.use((err, req, res, next) => {
   console.error('Unhandled server error:', err.message || err);
   res.status(500).json({ error: 'Internal server error' });
 });
 
-// 9. Port Configuration
+// 10. Port Configuration
 // Preserves Render dynamic PORT, handles AI Studio container routing (3000),
 // and defaults to port 5000 for standard local development.
 const PORT = process.env.PORT || 5000;
