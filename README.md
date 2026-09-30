@@ -22,11 +22,12 @@ The application uses:
 ## Project Structure
 
 ```text
-sprint11-final/
+sprint-11/
 ├── frontend/
 │   ├── src/
 │   ├── public/
 │   ├── api/
+│   ├── .env.example
 │   ├── package.json
 │   ├── vite.config.js
 │   └── vercel.json
@@ -37,7 +38,9 @@ sprint11-final/
 │   ├── middleware/
 │   ├── models/
 │   ├── routes/
+│   ├── .env.example
 │   ├── package.json
+│   ├── render.yaml
 │   └── server.js
 │
 ├── .gitignore
@@ -287,6 +290,14 @@ MongoDB stores the Cloudinary URL rather than the raw image data.
 
 ---
 
+# Live Deployment
+
+- Frontend (Vercel): https://frontend-gamma-plum-ht1lhexvda.vercel.app
+- Backend (Render): https://sprint-11-v3y3.onrender.com
+- API: https://sprint-11-v3y3.onrender.com/api/posts
+
+---
+
 # Deployment
 
 ## Frontend - Vercel
@@ -296,7 +307,7 @@ Deploy the `frontend` directory to Vercel.
 Set the following production environment variable:
 
 ```env
-VITE_API_URL=https://YOUR-RENDER-BACKEND-URL
+VITE_API_URL=https://sprint-11-v3y3.onrender.com
 ```
 
 Do not use:
@@ -318,7 +329,7 @@ Configure the following environment variables:
 ```env
 MONGO_URI=your_mongodb_atlas_connection_string
 
-CLIENT_URL=https://YOUR-VERCEL-FRONTEND-URL
+CLIENT_URL=https://frontend-gamma-plum-ht1lhexvda.vercel.app
 
 CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
 
